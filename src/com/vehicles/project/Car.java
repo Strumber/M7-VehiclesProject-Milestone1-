@@ -3,17 +3,19 @@ package com.vehicles.project;
 import java.util.List;
 
 public class Car extends Vehicle {
+	
+	
 
 	public Car(String plate, String brand, String color) {
 		super(plate, brand, color);
 	}
 
-	public void addWheels(List<Wheel> frontWheels, List<Wheel> backWheels) throws Exception {
+	public void addWheels(List<Wheel> frontWheels, List<Wheel> backWheels) throws Exception {//metode addwheels
 		addTwoWheels(frontWheels);
 		addTwoWheels(backWheels);
 	}
 
-	public void addTwoWheels(List<Wheel> wheels) throws Exception {
+	public void addTwoWheels(List<Wheel> wheels) throws Exception { //metode addTwoWheels
 		if (wheels.size() != 2)
 			throw new Exception();
 
