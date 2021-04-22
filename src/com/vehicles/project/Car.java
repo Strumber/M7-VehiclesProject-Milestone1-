@@ -6,7 +6,7 @@ public class Car extends Vehicle {
 	
 	
 
-	public Car(String plate, String brand, String color) {
+	public Car(String plate, String brand, String color) throws Exception {
 		super(plate, brand, color);
 	}
 
@@ -27,6 +27,12 @@ public class Car extends Vehicle {
 
 		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
+	}
+
+	@Override
+	public String toString() {
+		return "Cotxe [Matricula= " + getPlate() + ", Marca= " + getBrand() + ", Color= " + getColor()
+				+ "\n ";
 	}
 
 }
