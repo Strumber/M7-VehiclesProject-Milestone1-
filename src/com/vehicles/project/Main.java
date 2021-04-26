@@ -31,7 +31,7 @@ public class Main {
 						vc.createCar();
 						break;
 					case 2:
-						// ec.mostrarEdifici();
+						vc.createBike();
 						break;
 					case 3:
 						// ec.eliminarEdifici();
