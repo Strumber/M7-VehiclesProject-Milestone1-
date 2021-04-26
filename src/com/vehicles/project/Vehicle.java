@@ -11,10 +11,9 @@ public abstract class Vehicle {
 	protected String plate;
 	protected String brand;
 	protected String color;
-	protected ArrayList<Wheel> wheels = new ArrayList<Wheel>();
+	protected List<Wheel> wheels = new ArrayList<Wheel>();
 	
-	static final private Pattern patternplate = Pattern.compile("^[0-9]{4}[A-Z]{3}$");//regex Matrícula
-	//static final private Pattern patternplate = Pattern.compile("^\\d{4}[ -]?[[B-Z]&&[^QEIOU]]{3}$");
+	
 	
 
 	public Vehicle(String plate, String brand, String color) throws MatriculaInvalidaException{//constructor
@@ -27,7 +26,8 @@ public abstract class Vehicle {
 	
 	
 	public static boolean esValida(String plate) {
-		return patternplate.matcher(plate).matches();
+		return plate.matches("\\d{4}[a-zA-Z]{2}")
+				|| plate.matches("\\d{4}[a-zA-Z]{3}");
 	}
 	
 	public String getPlate() {

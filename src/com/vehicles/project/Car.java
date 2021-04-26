@@ -23,7 +23,7 @@ public class Car extends Vehicle {
 		Wheel leftWheel = wheels.get(1);
 
 		if (!rightWheel.equals(leftWheel))
-			throw new Exception();
+			throw new Exception("Les rodes han de ser iguals");
 
 		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
@@ -32,7 +32,11 @@ public class Car extends Vehicle {
 	@Override
 	public String toString() {
 		return "Cotxe [Matricula= " + getPlate() + ", Marca= " + getBrand() + ", Color= " + getColor()
-				+ "\n ";
+				+ "\n "+ "nº de Rodes: "+ this.getWheels().size()
+				+ "\n Marca roda trasera: "+getWheels().get(0).getBrand()
+				+ "\n Diametre roda trasera: "+getWheels().get(0).getDiameter()
+				+ "\n Marca roda Davantera: "+getWheels().get(1).getBrand()
+				+ "\n Diametre roda Davantera: "+getWheels().get(1).getDiameter();
 	}
 
 }
